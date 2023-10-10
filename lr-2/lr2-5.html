@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    function changer(num, quantity, pm=''){
+        let str_num = String(num);
+        if (str_num.length > quantity){
+            return 'ERROR num length > quantity'
+        }
+        while (str_num.length < quantity){
+            str_num = '0' + str_num;
+        }
+        return pm + str_num
+    }
+
+    alert(changer(12345, 7, '+'))
+</script>
