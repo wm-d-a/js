@@ -3,5 +3,25 @@
 <meta charset="utf-8">
 </head>
 <script>
-    
+    function merge(arr1, arr2){
+        let mx, mn;
+        if (arr1.length > arr2.length){
+             mx = arr1;
+             mn = arr2;
+        }
+        else {
+            mx = arr2;
+            mn = arr1;
+        };
+
+        for (let i = 0; i < mn.length; i++){
+            mx[i] += mn[i];
+        }
+        return mx;
+    }
+
+    let arr_A = [1, 2, 3, 4, 5];
+    let arr_B = [1, 1, 1];
+
+    alert(merge(arr_A, arr_B));
 </script>
