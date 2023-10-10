@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    function generator(num){
+        let result_matrix = [];
+        for (let i = 0; i < num; i++){
+            result_matrix.push([])
+            for (let j = 0; j < num; j++){
+                result_matrix[i].push(Math.floor(Math.random() * 10))
+            }
+        }
+        return result_matrix;
+    }
+
+    function MultiplyMatrix(A, B) {
+        var rowsA = A.length,
+            colsA = A[0].length,
+            rowsB = B.length,
+            colsB = B[0].length,
+            C = [];
+        if (colsA != rowsB) return false;
+        for (var i = 0; i < rowsA; i++) C[i] = [];
+        for (var k = 0; k < colsB; k++) {
+            for (var i = 0; i < rowsA; i++) {
+            var t = 0;
+            for (var j = 0; j < rowsB; j++) t += A[i][j] * B[j][k];
+            C[i][k] = t;
+            }
+        }
+        return C;
+    }
+
+    let matrix_A = generator(3);
+    let matrix_B = generator(3);
+    console.log(MultiplyMatrix(matrix_A, matrix_B));
+</script>
