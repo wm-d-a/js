@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    function ur(a,b,c){
+        let d = b ** 2 - 4 * a * c;
+        let string = `${a}*x^2+${b}*x+${c} = 0` + '; \n'
+        //alert(`D = ${d}`);
+        b = b * (-1)
+        if (d > 0){
+            let x1 = (b + Math.sqrt(d)) / (2 * a);
+            let x2 = (b - Math.sqrt(d)) / (2 * a);
+            string += "Кол-во корней = 2" + '; \n'
+            string += `x1 = ${x1}` + '; \n'
+            string += `x2 = ${x2}`
+        }
+        else if (d == 0){
+            let x = b / (2 * a);
+            string += "Кол-во корней = 1" + '; \n'
+            string += `x = ${x}`
+        }
+        else{
+            string += "Кол-во корней = 0" + '; \n'
+            string += "Корней нет"
+        }   
+        return string
+    }
+
+    alert("введите коэфф. уравнения")
+    //2 4 2; 8 4 2; 1 5 2
+    let a = Number(prompt("a = "));
+    let b = Number(prompt("b = "));
+    let c = Number(prompt("c = "));
+    alert(ur(a, b ,c ));
+</script>

@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    function sell(something){
+        this.itemsSold++;
+        alert(`Менеджер ${this.name} продал ${something}. Теперь у него ${this.itemsSold} продаж`);
+    }
+    
+    function Seller(name, itemsSold){
+        this.name = name;
+        this.itemsSold = Number(itemsSold);
+    
+        this.sell = sell;
+    };
+    let sample = new Seller('Adam', 0);
+    sample.sell('computer');
+    sample.sell('notebook');
+    sample.sell('book');
+</script>

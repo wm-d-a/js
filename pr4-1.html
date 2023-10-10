@@ -1,0 +1,14 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    let student = new Object();
+    student.firstName = 'Damir';
+    student.lastName = 'Nizamov';
+    alert(student.firstName + ' ' + student.lastName);
+    student.firstName = 'unknown';
+    alert(student.firstName  + ' ' +  student.lastName);
+    delete student.firstName;
+    alert(student.firstName  + ' ' +  student.lastName);
+</script>

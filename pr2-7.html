@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    let number = Number(prompt('Введите число от -999 до 999'));
+    let znak;
+    let num_c;
+    if (number > 0){
+        znak = '+'
+        if (number > 99){
+            num_c = 3
+        }
+        else if (number > 9){
+            num_c = 2
+        }
+        else{
+            num_c = 1
+        }
+    }
+    else{
+        znak = '-'
+        if (number < -99){
+            num_c = 3
+        }
+        else if (number < -9){
+            num_c = 2
+        }
+        else{
+            num_c = 1
+        }
+    }
+    
+    
+    alert(`Знак введенного числа: ${znak}; Кол-во цифр: ${num_c}`)
+</script>

@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    // function step(x, n){
+    //     return n > 0 ? x * step(x, n - 1): 1;
+    // }
+
+    function step(x, n){
+        let result = 1;
+        for(let i = 0; i < n; i++){
+            result *= x
+        }
+        return result;
+    }
+
+    alert(step(Number(prompt('Введите x')), Number(prompt('Введите n (n > 0)'))))
+</script>

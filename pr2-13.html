@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    let num = Number(prompt('Введите положительное число'));
+    let sum = 0;
+    if (num > 0){
+        for(let i = 1; i <= num; i++){
+            sum +=  i * i;
+        }
+    }
+    else{
+        alert('Wrong number!')
+    }
+    alert(sum);
+</script>

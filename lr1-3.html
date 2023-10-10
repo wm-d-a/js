@@ -1,0 +1,14 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    for (let i = 100; i < 1000; i++){
+        let a = Math.floor(i / 100);
+        let b = Math.floor((i / 10) % 10);
+        let c = Math.floor(i % 10);
+        if (a ** 3 + b ** 3 + c ** 3 == i){
+            console.log(i);
+        }
+    }
+</script>

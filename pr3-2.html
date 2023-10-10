@@ -1,0 +1,16 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    function langCheck(language){
+        return language == 'Русский' ? true: confirm('Переключиться на русский?') 
+    }
+
+    function langCheck2(language){
+        return language == 'Русский' || confirm('Переключиться на русский?') 
+    }
+
+    alert(langCheck('Русский'))
+    alert(langCheck('Test'))
+</script>

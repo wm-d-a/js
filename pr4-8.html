@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    function ten(s){
+        for (i in s){
+            if (typeof s[i] == 'number'){
+                s[i] = s[i] * 10;
+            }
+        }
+        return s;
+    }
+    
+    let sal = {
+        adam: 250,
+        bob: 350,
+        cindy: 400,
+        donald: 'Fired'
+    }
+    sal = ten(sal);
+    for(i in sal){
+        alert(sal[i]);
+    }
+</script>

@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    let student1 = {
+        first_Name: 'Vasya',
+        last_Name: 'TestLastName1',
+        group: 'TestGroup1',
+        year: 'TestYear1',
+    }
+
+    let student2 = {
+        first_Name: 'Vasya2',
+        last_Name: 'TestLastName2',
+        group: 'TestGroup2',
+        year: 'TestYear2',
+    }
+
+    let student3 = {
+        first_Name: 'Vasya3',
+        last_Name: 'TestLastName3',
+        group: 'TestGroup3',
+        year: 'TestYear3',
+    }
+
+    function getInfo(){
+        alert(`${this.first_Name} ${this.last_Name} обучается в группе ${this.group}. Год поступления ${this.year}`);
+    }
+
+    student1.getInfo = getInfo;
+    student2.getInfo = getInfo;
+    student3.getInfo = getInfo;
+
+    student1.getInfo();
+    student2.getInfo();
+    student3.getInfo();
+</script>

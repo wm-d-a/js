@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    function getWidth(){
+        return this.width;
+    };
+    function getLength(){
+        return this.length;
+    };
+    function getHeight(){
+        return this.height;
+    };
+
+    function calcVolume(){
+        return this.width * this.length * this.height;
+    }
+    function calcSurfaceArea(){
+        return this.width*this.length * 2 + this.width* this.height * 2 + this.height * this.length * 2;
+    }
+    
+    function Parallelepiped(width, length, height){
+        this.width = Number(width);
+        this.length = Number(length);
+        this.height = Number(height);
+    
+        this.getWidth = getWidth;
+        this.getLength = getLength;
+        this.getHeight = getHeight;
+        this.calcVolume = calcVolume;
+        this.calcSurfaceArea = calcSurfaceArea;
+    };
+    let sample = new Parallelepiped(5, 5, 5);
+    //let sample2 = new Parallelepiped(1, 2, 3);
+    alert(`${sample.getHeight()} ${sample.getLength()} ${sample.getWidth()}`);
+
+    alert(sample.calcSurfaceArea());
+    alert(sample.calcVolume())
+</script>

@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    function check(a, b){
+        let res = {}
+        for(i in a){
+            if(!(i in b)){
+                res[i] = a[i]
+            }
+        }
+        return res
+    }
+
+    let a = {a: 1, b: 2, c: 3};
+    let b = {c: 1, b: 2};
+    result = check(a, b);
+
+    for(i in result){
+        alert(`${i}: ${result[i]}`);
+    }
+</script>

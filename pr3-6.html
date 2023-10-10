@@ -1,0 +1,13 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    let cel = Number(prompt('Введите температуру в градусах цельсия'));
+    let celsiusToFahrenheit = cel => (cel * 9 / 5) + 32
+    alert(celsiusToFahrenheit(cel))
+
+    let far = Number(prompt('Введите температуру в градусах фаренгейта'));
+    let fahrenheitToCelsius = far => (far - 32) * 5 / 9
+    alert(fahrenheitToCelsius(far))
+</script>

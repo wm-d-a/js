@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    function read(){
+        let current_num = Number(prompt('Input a number: '));
+        this.value += current_num;
+    };
+    function Incrementor(firstValue){
+        this.value = Number(firstValue);
+        this.read = read;
+    };
+    let sample = new Incrementor(5);
+    let sample2 = new Incrementor(10);
+    sample.read();
+    alert(sample.value);
+    sample2.read();
+    alert(sample2.value);
+</script>
