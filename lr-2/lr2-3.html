@@ -1,0 +1,16 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    function changer(str) {
+        let new_str = str.toLowerCase();
+        let words = new_str.split(' ');
+        for(let i in words){
+            words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+        }
+        return words.join(' ');
+    }
+
+    alert(changer("HeLlO wOrLd"));
+</script>
