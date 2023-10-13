@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+
+    function mod_str(sp){
+        let result = ' like this';
+        if (sp.length == 0){
+            return 'no one likes this'
+        }
+        else if (sp.length == 1) {
+            return sp[0] +  ' likes this';
+        }
+        else if (sp.length == 2) {
+            return sp[0] + ' and ' + sp[1] + result;
+        }
+        else if (sp.length == 3) {
+            return sp[0] + ', ' + sp[1] + ' and ' + sp[2] + result;
+        }
+        else return sp[0] + ', ' + sp[1] + ' and ' + (sp.length - 2) + ' others'+ result
+    }
+    alert(mod_str([]));
+    alert(mod_str(['Test1']));
+    alert(mod_str(['Test1', 'Test2']));
+    alert(mod_str(['Test1', 'Test2', 'Test3']));
+    alert(mod_str(['Test1', 'Test2', 'Test3', 'Test4']));
+
+</script>

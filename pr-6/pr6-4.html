@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    function counter(num){
+        let str_num = String(num);
+        let result_sum = 0;
+        let result_mn = 1;
+        for(let i = 0; i < str_num.length; i++){
+            result_mn *= Number(str_num[i]);
+            result_sum += Number(str_num[i]);
+        }
+        if(str_num % 2 == 0)
+            return result_sum;
+        else 
+            return result_mn;
+    }
+    alert(counter(123));
+    alert(counter(1234));
+</script>

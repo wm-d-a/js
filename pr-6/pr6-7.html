@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+
+    function checker(num){
+        let str_num = String(num);
+        let sum = 0;
+
+        for(let i = 0; i < str_num.length; i++){
+            sum += Math.pow(Number(str_num[i]), str_num.length);
+        }
+        
+        if (num == sum){
+            return true;
+        }
+        else return false;
+    }
+    
+    alert(checker(153));
+    alert(checker(3435));
+
+</script>

@@ -1,0 +1,10 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    function counter(letter, str){
+        return (str.match(new RegExp(letter, "g")) || []).length;
+    }
+    alert(counter('a', 'asdasdad'));
+</script>

@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    function changer(year1, year2){
+        let leap;
+        let result = '';
+        for(let year = year1; year < year2; year++){
+            if (year % 400 == 0)
+                leap = true;
+            else if (year % 100 == 0)
+                leap = false;
+            else if (year % 4 == 0)
+                leap = true;
+            else
+                leap = false;
+            if (leap){
+                result += String(year) + ' '
+            }
+        }
+        return result;
+    }
+    
+    alert(changer(2000, 2023));
+</script>

@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+
+    function doubler(sp){
+        let result = [];
+        for(let i = 0; i < sp.length; i += 2){
+            if (i + 1 < sp.length ){
+                result.push(sp[i] + sp[i + 1]);
+            }
+            else result.push(sp[i] + '_')
+        }
+        return result;
+    }
+    
+    alert(doubler('qwe'));
+    alert(doubler('qwer'));
+
+</script>

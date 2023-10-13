@@ -4,8 +4,11 @@
 </head>
 <script>
     function changer(str){
-        let result = str
-        return result.split('').reverse().join('')
+        let buf = str.split(' ');
+        for(let i in buf){
+            buf[i] = buf[i].split('').reverse().join('')
+        }
+        return buf.join(' ')
     }
 
     str = 'Тестовая строка'
