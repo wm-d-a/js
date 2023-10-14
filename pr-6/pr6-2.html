@@ -4,18 +4,19 @@
 </head>
 <script>
     function changer(year1, year2){
-        let leap;
+        let buf;
         let result = '';
         for(let year = year1; year < year2; year++){
-            if (year % 400 == 0)
-                leap = true;
+            if (year % 400 == 0){
+                buf = true;
+            }
             else if (year % 100 == 0)
-                leap = false;
+                buf = false;
             else if (year % 4 == 0)
-                leap = true;
+                buf = true;
             else
-                leap = false;
-            if (leap){
+                buf = false;
+            if (buf){
                 result += String(year) + ' '
             }
         }
