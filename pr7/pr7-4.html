@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+
+    let arr = [
+        {fisrt: 1, second: 2},
+        {fisrt: 7, second: 1},
+        {fisrt: 3, second: 3}
+    ]
+    arr.sort((a, b) => Number(a.second) - Number(b.second));
+    for(let i in arr){
+        alert(`{first: ${arr[i].fisrt}, second: ${arr[i].second}}`)
+    }
+
+</script>

@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    
+    function changer(str){
+        let buf = str.split(' ');
+
+        for(let i in buf){
+            if(buf[i].length >= 5){
+                buf[i] = buf[i].split('').reverse().join("");;
+            }
+        }
+        return buf.join(' ');
+    }
+
+    alert(changer("Hello world this is a test"));
+
+</script>

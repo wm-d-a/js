@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+
+    let students = {
+        'group_x': ['student_x1', 'student_x2', 'student_x3'],
+        'group_y': ['student_y1', 'student_y2', 'student_y3'],
+        'group_z': ['student_z1', 'student_z2']
+    };
+    
+    for(let key in students){
+        for(let i in students[key]){
+            console.log(students[key][i]);
+        }
+    }
+
+</script>
