@@ -1,0 +1,13 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    function checker(year){
+        let date = new Date(year, 2, 0);
+        return (date.getDate() === 29); 
+    }
+
+    alert(checker(2012));
+    alert(checker(2023));
+</script>

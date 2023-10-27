@@ -1,0 +1,13 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    function getDays(str_date1, str_date2){
+        let date1 = new Date(str_date1); 
+        let date2 = new Date(str_date2); 
+        return (date2 - date1) / (1000 * 3600 * 24);
+    }
+
+    alert(getDays('01/01/2020', '02/20/2020'));
+</script>

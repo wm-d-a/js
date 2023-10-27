@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    function getTime(p){
+        let today = new Date();
+        let dd = String(today.getDate()).padStart(2, '0');
+        let mm = String(today.getMonth() + 1).padStart(2, '0'); 
+        let yyyy = today.getFullYear();
+
+        today = dd + p + mm + p + yyyy;
+        return today;
+    }
+
+    alert(getTime('-'));
+</script>

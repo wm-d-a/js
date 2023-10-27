@@ -1,0 +1,13 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    function addWeeks(date, weeks) {
+        let resultDate = date;
+        resultDate.setDate(resultDate.getDate() + weeks * 7);
+        return resultDate;
+    }
+
+    alert(addWeeks(new Date(), 3));
+</script>

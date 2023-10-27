@@ -1,0 +1,15 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    function getLastDayOfWeek(year, month) {
+        let last_day = new Date(year, month, 0);
+        let buf = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+        let day_ind = last_day.getDay();
+        //alert(day_ind);
+        return buf[day_ind];
+    }
+
+    alert(getLastDayOfWeek(2023, 9));
+</script>
