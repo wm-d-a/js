@@ -1,0 +1,8 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    regexp = /[http://, https://].*[.com, .ru]/g
+    alert('https://www.yandex.ru http://www.yandex.ru https://www.google.com test'.match(regexp) || [])
+</script>
