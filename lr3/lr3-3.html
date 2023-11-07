@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    
+    function checker(str){
+        let rgxp1 = /\d\d[/]\d\d[/]\d\d\d\d/g
+        let rgxp2 = /\d\d[.]\d\d[.]\d\d\d\d/g
+        let rgxp3 = /\d\d[-]\d\d[-]\d\d\d\d/g
+        let result1 = str.match(rgxp1) || []
+        let result2 = str.match(rgxp2) || []
+        let result3 = str.match(rgxp3) || []
+        console.log(result1)
+        console.log(result2)
+        console.log(result3)
+        if (result1.length != 0) return result1;
+        if (result2.length != 0) return result2;
+        if (result3.length != 0) return result3;
+        else return [];
+    }
+
+    alert(checker("Тестовый текст для определения наличия различных дат 20.06.2002, кроме того 2р-23.2d62, а также 20.06-2002"))
+
+</script>

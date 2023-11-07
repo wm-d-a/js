@@ -1,0 +1,16 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    
+    function checker(str){
+        let rgxp1 = /[aeiouy]/gi
+        let result1 = str.match(rgxp1) || []
+        console.log(result1)
+        return result1.length;
+    }
+
+    alert(checker("The Russian Federation"))
+
+</script>

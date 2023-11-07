@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    function checker(start, end) {
+        let result = [];
+
+        if (!end) {
+            end = start;
+        }
+
+        for (let year = start; year <= end; year++) {
+            for (let month = 0; month < 12; month++) {
+                let date = new Date(year, month, 13);
+
+                if (date.getDay() === 5) {
+                    result.push(date);
+                }
+                }
+            }
+
+        return result;
+    }
+
+    alert(checker(2020, 2023));
+
+</script>

@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    
+    function changer(str){
+        let regexp = /\d[a-z]*/g
+        let buf = str.match(regexp) || []
+        let result = ''
+        for(let i = 0; i < buf.length; i++){
+            
+            let buf_str = buf[i].slice(1, buf[i].length)
+            let local_res = ''
+            for(let j = 0; j < buf_str.length; j++){
+                for(let h = 0; h < Number(buf[i].slice(0, 1)); h++){
+                    local_res += buf_str[j]
+                }
+            }
+            result += local_res;
+        }
+        return result
+    }
+
+    alert(changer("3a2b5c2d"));
+    alert(changer("3xyz"));
+    alert(changer("3a443c1d"));
+    alert(changer("1111"));
+</script>

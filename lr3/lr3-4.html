@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    
+    function s_in(str){
+        buf = str.replace(/[a]/gi, 1)
+        buf = buf.replace(/[e]/gi, 2)
+        buf = buf.replace(/[i]/gi, 3)
+        buf = buf.replace(/[o]/gi, 4)
+        buf = buf.replace(/[u]/gi, 5)
+        buf = buf.replace(/[y]/gi, 6)
+        return buf;
+    }
+
+    function s_out(str){
+        buf = str.replace(/[1]/gi, 'a')
+        buf = buf.replace(/[2]/gi, 'e')
+        buf = buf.replace(/[3]/gi, 'i')
+        buf = buf.replace(/[4]/gi, 'o')
+        buf = buf.replace(/[5]/gi, 'u')
+        buf = buf.replace(/[6]/gi, 'y')
+        return buf;
+    }
+
+    alert(s_in("Hello World"));
+    alert(s_out("H2ll4 W4rld"));
+</script>
