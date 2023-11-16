@@ -3,7 +3,9 @@
 <meta charset="utf-8">
 </head>
 <script>
-    regexp = /((http|https):\/\/).+(\.(com|ru))/g
+    regexp = /((http|https):\/\/)www\.\w+(\.(com|ru))/
     //alert('https://www.yandex.ru http://www.yandex.ru https://www.google.com test'.match(regexp) || [])
+    //alert('http://www.google.com http://www.google.com http://www.google.com'.match(regexp));
+    alert(regexp.test('http://www.google.com'));
     alert(regexp.test('http://www.google.com'));
 </script>

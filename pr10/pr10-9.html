@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    function changer(num){
+        let regexp = /(\d{3})/g
+        //let str = num.toString()
+        let str = num.toString().split("").reverse().join("");
+        let result = str.replace(regexp, '$1,')
+        result = result.split("").reverse().join("");
+        return result[0] == ',' ? result.slice(1): result
+    }
+
+    alert(changer(1234))
+    alert(changer(12345.67))
+    alert(changer(123456789))
+</script>

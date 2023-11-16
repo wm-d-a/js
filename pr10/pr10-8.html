@@ -1,0 +1,11 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    let regexp = /\b(\d\d):(\d\d)\b/g
+    let results = '12:00 14:30 18:45'.matchAll(regexp)
+    for(let result of results){
+        alert(result)
+    }
+</script>

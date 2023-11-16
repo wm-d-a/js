@@ -5,7 +5,7 @@
 <script>
     function sm(str){
         let regexp = /\d+/g
-        let buf = str.match(regexp)
+        let buf = str.match(regexp) || []
         let result = 0;
         for(let i = 0; i < buf.length; i++){
             result += Number(buf[i]);
@@ -13,5 +13,5 @@
         return result;
     }
 
-    alert(sm("Hello World! 1 23 JavaScript 456"));
+    alert(sm("Hello World!  JavaScript "));
 </script>
