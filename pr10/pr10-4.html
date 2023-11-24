@@ -3,12 +3,14 @@
 <meta charset="utf-8">
 </head>
 <script>
-    let regexp = /(0(?!0)|1)[0-2][.][0-5][0-9]\s(am|pm)/g
+    let regexp = /((0(?!0)|1)[0-2][.][0-5][0-9]\s(am|pm))|(0[1-9][.][0-5][0-9]\s(am|pm))/g
     
-    // /[0-1][0-2][.][0-5][0-9] am|pm/
+    //let old_regexp = /[0-1][0-2][.][0-5][0-9] am|pm/
     alert('11.59 pm'.match(regexp))
     alert('00.01 pm'.match(regexp))
     alert('12.96 pm'.match(regexp))
+    alert('23.48 am'.match(regexp))
+    alert('09.01 am'.match(regexp))
     //11.59 am
     //00.01 pm
 </script>

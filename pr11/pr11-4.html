@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    
+    function createPass(str1){
+        function guessPass(str2){
+            if (str1 == str2){
+                return true
+            }
+            else return false
+        }
+
+        return guessPass('samePass')
+    }
+
+    alert(createPass("pass"))
+    alert(createPass("samePass"))
+    alert(createPass('sadfsd'))
+
+</script>
