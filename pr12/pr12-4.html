@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    
+    function getarr() {
+        var arr = [];
+        for (var i = 0; i < 10; i++) {
+            arr.push(Math.floor(Math.random() * 9) + 1);
+        }
+        return arr;
+    }
+    
+    function test_upper(arr){
+        var i = 0
+
+        function test() {
+
+            if (i < arr.length - 1) {
+                alert(arr[i]);
+                i++
+                test();
+            }
+        }
+        test()
+    }
+
+    
+    alert(test_upper(getarr()))
+
+</script>

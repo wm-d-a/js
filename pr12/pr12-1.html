@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    
+    function test(num){
+        if (num == 1){
+            return 1
+        }
+        else {
+            return num + test(num - 1)
+        }
+    }
+
+    alert(test(3))
+
+</script>

@@ -12,11 +12,11 @@
             else return false
         }
 
-        return guessPass('samePass')
+        return guessPass
     }
 
-    alert(createPass("pass"))
-    alert(createPass("samePass"))
-    alert(createPass('sadfsd'))
+    alert(createPass("pass")('samePass'))
+    alert(createPass("samePass")('samePass'))
+    alert(createPass('sadfsd')('samePass'))
 
 </script>

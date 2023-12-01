@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+    
+    function test(x, y) {
+        if (y === 0){
+            return x;
+        } 
+        else{
+            return test(x + 1, y - 1);
+        }
+    }
+
+    alert(test(12, 21))
+
+</script>

@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+
+    function checksum(num){
+        if (num < 10){
+            return num
+        }
+        else{
+            return num % 10 + checksum(Math.floor(num/10));
+        }
+    }
+    //num.toString().split('').reduce((partialSum, a) => Number(partialSum) + Number(a), 0);
+    function test(num){
+        if(num.toString().length === 1){
+            return num
+        }
+        else{
+            return test(checksum(num))
+        }
+    }
+
+    alert(test(123456))
+
+</script>
