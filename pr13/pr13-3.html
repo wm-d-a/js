@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+
+    function srt(a, b) {
+        return a[1] - b[1];
+    }
+
+    let obj = {three: 3, two: 2, five: 5, four: 4};
+
+    let result = Object.fromEntries(Object.entries(obj).sort(srt));
+
+    alert(JSON.stringify(result, null, 2));
+
+</script>

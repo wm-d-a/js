@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+
+    let obj = {};
+
+    Object.defineProperties(obj, {
+        test1: {value: 'test_val1', writable: false, configurable: false, enumerable: true},
+        test2: {value: 'test_val2', writable: false, configurable: false, enumerable: true},
+        test3: {value: 'test_val3', writable: false, configurable: false, enumerable: true}
+    })
+
+    obj.test1 = 'NEW VALUE'
+
+    alert(JSON.stringify(obj))
+
+</script>

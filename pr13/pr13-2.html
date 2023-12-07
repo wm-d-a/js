@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+
+    let obj = {name: "Adam", age: 25}
+    let buf = {};
+
+    for(let [key, value] of Object.entries(obj)){
+        buf[value] = key
+    }
+
+    // alert(JSON.stringify(obj, function(key, value){
+    //     obj[value] = key;
+    // }))
+    alert(JSON.stringify(buf))
+
+</script>

@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+
+    function test(str){
+        let obj = JSON.parse(str)
+
+        let sm = 0;
+        for(let [key, value] of Object.entries(obj)){
+            sm += value
+        }
+
+        for(let [key, value] of Object.entries(obj)){
+            obj[key] = 360 / sm * value
+        }
+
+        return JSON.stringify(obj)
+    }
+
+    alert(test(('{"A": 4, "B" : 5, "C" : 6, "D" : 1, "E" : 4}')))
+
+</script>

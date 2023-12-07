@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+
+    function User(){
+        Object.defineProperty(this, "name", {
+            value: "Damir",
+            configurable: false,
+            writable: false,
+            enumerable: true
+        });
+    }
+
+    let test = new User();
+    alert(JSON.stringify(test));
+    test.name = "TEST";
+    alert(JSON.stringify(test));
+
+</script>
