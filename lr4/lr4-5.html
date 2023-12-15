@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+
+    function ObjConstr(first, last) {
+        this.firstName = first;
+        this.lastName = last;
+        Object.defineProperty(this, 'fullName', {
+            get: function() {
+                return `${this.firstName} ${this.lastName}`;
+            },
+            set: function(value) {
+                let buf = value.split(' ');
+                this.firstName = buf[0] || '';
+                this.lastName = buf[1] || '';
+            },
+            enumerable: true
+        });
+    }
+
+    let person = new ObjConstr('Joe', 'Smith');
+    console.log(person.firstName); 
+    console.log(person.lastName); 
+    console.log(person.fullName); 
+
+    person.fullName = 'Bob James';
+    console.log(person.firstName); 
+    console.log(person.lastName); 
+    console.log(person.fullName); 
+
+</script>

@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+
+    let data = {
+        2019: { meat: 1.25, cheese: 1, candy: 0.5, milk: 0.4 },
+        2020: { meat: 1.25, cheese: 1.25, candy: 0.7, milk: 0.5 },
+        2021: { meat: 2.5, cheese: 1, candy: 1, milk: 0.6 }
+    }
+
+    function main(data, basket, startYear, endYear){
+        let basket_items = basket.split(',');
+        let startPrice = 0;
+        let endPrice = 0;
+        for (let i =0; i<basket_items.length;i++){
+            let str = basket_items[i].replace(/ /g, '');
+            let item = str.split('*');
+            let prName = item[1];
+            let prCount = parseInt(item[0]);
+            startPrice += data[startYear][prName]*prCount;
+            endPrice += data[endYear][prName]*prCount;
+        }
+        let inflation = ((endPrice - startPrice)/startPrice)*100;
+        return Math.round(inflation*100)/100;
+    }
+
+    let basket = '1 * meat, 4 * cheese, 2 * candy, 4 * milk'
+    
+    console.log(main(data, basket, 2019, 2021));
+
+</script>

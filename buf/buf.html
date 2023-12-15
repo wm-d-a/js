@@ -1,0 +1,19 @@
+local_res = '['
+if (arr.length > 0){
+    for (let i = 0; i < arr.length - 1; i++){
+        if ((typeof arr[i] === 'number') || (typeof arr[i] === 'boolean')){
+            local_res += arr[i] + ', '
+        }
+        if (typeof arr[i] === 'string'){
+            local_res += "'" + arr[i] + "'" + ', '
+        }
+        if (Array.isArray(arr[i])){
+            buf = get_str(arr[i])
+            local_res += buf
+        }
+    }
+    //local_res = local_res.slice(0, -2)
+    local_res += arr[arr.length - 1]
+}
+local_res += ']'
+return local_res

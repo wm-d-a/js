@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+
+    // function User(){
+    //     Object.defineProperty(this, "name", {
+    //         value: "Damir",
+    //         configurable: false,
+    //         writable: false,
+    //         enumerable: true
+    //     });
+    // }
+
+
+    let Object1 = {
+        create(prototype, properties = ''){
+
+            function clone(obj) {
+                if (null == obj || "object" != typeof obj) return obj;
+                var copy = obj.constructor();
+                for (var attr in obj) {
+                    if (obj.hasOwnProperty(attr)) copy[attr] = obj[attr];
+                }
+                return copy;
+            }
+
+            //alert(prototype)
+            //alert(properties)
+            
+            if ((prototype !== null) && (typeof prototype !== 'object')){
+                return 'Ошибка' 
+            }
+
+            //console.log(this)
+            let cln = clone(this);
+            cln.prototype = prototype
+            //console.log(this)
+            let ban = Object.getOwnPropertyDescriptors(properties)
+            Object.defineProperties(cln, ban);
+            return cln
+        }
+    }
+
+    let animal = {
+        eats: true
+    };
+
+    let rabbit = Object1.create(animal, {
+        jumps: {
+            value: true
+        }
+    })
+
+    for (obj in rabbit){
+        console.log(obj)
+    }
+
+    console.log(rabbit.jumps)
+    console.log(rabbit.eats)
+
+    let rabbit2 = Object.create(animal, {
+        jumps: {
+            value: true
+        }
+    })
+
+    console.log(rabbit.jumps)
+    console.log(rabbit.eats)
+
+</script>

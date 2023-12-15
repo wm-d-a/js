@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+
+    function main(num) {
+        if (num < 10) {
+            console.log(num);
+        } else {
+            console.log(num % 10);
+            main(Math.floor(num / 10));
+        }
+    }
+
+    main(654321);
+    main(12345);
+
+</script>

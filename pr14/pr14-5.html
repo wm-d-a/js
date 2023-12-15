@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+
+    Array.prototype.toString = function () {
+
+        function get_str(arr){
+            local_res = '['
+            if (arr.length > 0){
+                for (let i = 0; i < arr.length - 1; i++){
+                    if ((typeof arr[i] === 'number') || (typeof arr[i] === 'boolean')){
+                        local_res += arr[i] + ', '
+                    }
+                    if (typeof arr[i] === 'string'){
+                        local_res += "'" + arr[i] + "'" + ', '
+                    }
+                    if (Array.isArray(arr[i])){
+                        buf = get_str(arr[i])
+                        local_res += buf
+                    }
+                }
+                //local_res = local_res.slice(0, -2)
+                local_res += arr[arr.length - 1]
+            }
+            local_res += ']'
+            return local_res
+        }
+
+        let result = '['
+        if (this.length > 0){
+            for (let i = 0; i < this.length - 1; i++){
+                if ((typeof this[i] == 'number') || (typeof this[i] == 'boolean')){
+                    result += this[i] + ', '
+                }
+                if (typeof this[i] == 'string'){
+                    result += "'" + this[i] + "'" + ', '
+                }
+                if (Array.isArray(this[i])){
+                    buf = get_str(this[i])
+                    result += buf
+                }
+            }
+            result += this[this.length - 1]
+        }
+        result += ']'
+        return result
+    }
+
+    console.log([].toString())
+    console.log([5,6,7].toString())
+    console.log(["Hello World", 77 ,"JavaScript"].toString())
+    console.log([1,[2,3]].toString())
+    console.log([1,2,[3,4],[5,6],[[7]],[8,[9]]].toString())
+    console.log([true,false].toString())
+
+</script>

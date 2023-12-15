@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+
+    // function User(){
+    //     Object.defineProperty(this, "name", {
+    //         value: "Damir",
+    //         configurable: false,
+    //         writable: false,
+    //         enumerable: true
+    //     });
+    // }
+
+
+    
+    function Mcreate(prototype, properties){
+            //alert(prototype)
+            //alert(properties)
+            
+            if ((prototype !== null) && (typeof prototype !== 'object')){
+                return 'Ошибка' 
+            }
+
+            //console.log(this)
+            let obj ={};
+            obj.__proto__ = prototype
+            //console.log(this)
+            let ban = Object.getOwnPropertyDescriptors(properties)
+            if(typeof properties == undefined)
+            {
+                Object.defineProperties(obj, properties);
+            }
+            return obj
+    }
+
+    let animal = {
+        eats: true
+    };
+
+    let rabbit = new Mcreate(animal, {
+        jumps: {
+            value: true
+        }
+    })
+
+    console.log(rabbit.jumps)
+
+    let rabbit2 = Object.create(animal, {
+        jumps: {
+            value: true
+        }
+    })
+
+    console.log(rabbit.jumps)
+
+</script>

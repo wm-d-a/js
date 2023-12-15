@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+
+    function create(prototype, properties = ''){
+        if (prototype == null || typeof prototype !== 'object'){
+            return 'Ошибка'
+        }
+        let buf = {};
+        buf.__proto__ = prototype
+
+        if(properties !== undefined)
+        {
+            Object.defineProperties(buf, properties);
+        }
+        return buf;
+    }
+
+    let animal = {
+        eats: true
+    };
+
+    let rabbit = create(animal, {
+        jumps: {
+            value: true
+        }
+    })
+
+    console.log(rabbit.jumps)
+    console.log(rabbit.eats)
+
+    let rabbit2 = Object.create(animal, {
+        jumps: {
+            value: true
+        }
+    })
+
+    console.log(rabbit2.jumps)
+    console.log(rabbit2.eats)
+
+</script>

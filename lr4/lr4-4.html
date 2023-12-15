@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+
+    function ObjConst(first, last) {
+        let fullName = `${first} ${last}`;
+        Object.defineProperties(this, {
+            firstName: { value: first, writable: false, enumerable: true },
+            lastName: { value: last, writable: false, enumerable: true },
+            fullName: { value: fullName, writable: false, enumerable: true }
+        });
+    }
+
+    let person = new ObjConst('Damir', 'Nizamov');
+
+    console.log(person.firstName);
+    console.log(person.lastName);
+    console.log(person.fullName);
+
+    person.firstName = 'Test';
+    person.lastName = 'Test';
+    person.fullName = 'Test Test';
+
+    console.log(person.firstName);
+    console.log(person.lastName);
+    console.log(person.fullName);
+
+</script>

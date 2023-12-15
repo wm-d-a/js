@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+
+    function main(arr) {
+        let result = '';
+        for (let i = 0; i < arr.length; i++) {
+            if (Array.isArray(arr[i])) {
+                result += main(arr[i]);
+            } 
+            else {
+                result += arr[i];
+            }
+        }
+        return result;
+    }
+
+    alert(main(['he', ['llo', ' ', 'wor', 'ld'], [' ', 'ja', 'va', ['sc', ['ri', 'pt']]]]));
+
+</script>

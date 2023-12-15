@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+
+    function t1(){
+        function MakeUser(){}
+
+        MakeUser.prototype = { isAdmin: true}
+
+        let user = new MakeUser()
+
+        MakeUser.prototype = {}
+
+        alert(user.isAdmin)
+    }
+
+    function t2(){
+        function MakeUser(){}
+
+        MakeUser.prototype = { isAdmin: true}
+
+        let user = new MakeUser()
+
+        MakeUser.prototype.isAdmin = false
+
+        alert(user.isAdmin)
+    }
+
+    function t3(){
+        function MakeUser(){}
+
+        MakeUser.prototype = { isAdmin: true}
+
+        let user = new MakeUser()
+
+        delete MakeUser.prototype.isAdmin
+
+        alert(user.isAdmin)
+
+    }
+
+    function t4(){
+        function MakeUser(){}
+
+        MakeUser.prototype = { isAdmin: true}
+
+        let user = new MakeUser()
+
+        delete user.isAdmin
+    
+        alert(user.isAdmin)
+    }
+
+    t1()
+    t2()
+    t3()
+    t4()
+    
+</script>

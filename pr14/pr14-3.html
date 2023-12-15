@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+
+    function Airplane(name){
+        this.name = name
+        this.flies = false
+    }
+
+    let obj = {
+        takeOff() {
+            this.isFlying = true
+            console.log('Самолет взлетел')
+        },
+        land() {
+            this.isFlying = false
+            console.log('Самолет совершил посадку')
+        }
+    }
+
+    Airplane.prototype = obj
+
+    let airbus = new Airplane('Airbus A380')
+
+    airbus.takeOff()
+    airbus.land()
+
+</script>
