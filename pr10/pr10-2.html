@@ -10,9 +10,7 @@
     let str = ''+Math.floor(Math.random() * (9 - 1 + 1) + 1) + ' ' + Math.floor(Math.random() * (9 - 1 + 1) + 1) + ' ' + Math.floor(Math.random() * (9 - 1 + 1) + 1) + ' ' + Math.floor(Math.random() * (9 - 1 + 1) + 1) + ' ' + Math.floor(Math.random() * (9 - 1 + 1) + 1)
     alert(str)
     let regexp = /(\d)/g
-    // let digits = str.match(regexp)
-    // digits = digits.map((x) => x * x)
-    // alert(digits.join(' '))
+
     let result = str.replace(regexp, buf)
     alert(result)
 </script>

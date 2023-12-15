@@ -114,4 +114,46 @@
     alert(one(difference(one())))
     alert(nine(product(eigth())))
 
+
+function create_number(num) {
+    return function (operator= undefined) {
+        if (operator === undefined) {
+            return num;
+        }
+        return operator(num);
+    }
+}
+
+function create_operator(applier) {
+    return function (arg2) {
+        return function (arg1) {
+            return applier(arg1, arg2);
+        }
+    }
+}
+
+one = create_number(1);
+two = create_number(2);
+three = create_number(3);
+four = create_number(4);
+five = create_number(5);
+six = create_number(6);
+seven = create_number(7);
+eight = create_number(8);
+nine = create_number(9);
+ten = create_number(10);
+
+sum = create_operator((x, y) => x + y);
+difference = create_operator((x, y) => x - y);
+quotient = create_operator((x, y) => x / y);
+product = create_operator((x, y) => x * y);
+
+console.log(two(product(six())));
+console.log(nine(difference(four())));
+console.log(eight(quotient(two())));
+console.log(three(sum(five())));
+
+
+
+
 </script>

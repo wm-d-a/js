@@ -5,22 +5,37 @@
 <script>
     
     function changer(arr){
-        const result = [];
-        let zero_counter = 0;
+        // const result = [];
+        // let zero_counter = 0;
 
-        for (let i = 0; i < arr.length; i++) {
-            if (arr[i] !== 0) {
-                result.push(arr[i]);
-            } else {
-                zero_counter++;
+        // for (let i = 0; i < arr.length; i++) {
+        //     if (arr[i] !== 0) {
+        //         result.push(arr[i]);
+        //     } else {
+        //         zero_counter++;
+        //     }
+        // }
+
+        // for (let i = 0; i < zero_counter; i++) {
+        //     result.push(0);
+        // }
+        
+        arr.sort(function(a, b){
+            if (a === 0 && b === 0){
+                return 0;
             }
-        }
+            else if (a === 0){
+                return 1
+            }
+            else if(b === 0){
+                return -1
+            }
+            else {
+                return 0
+            }
+        }) 
 
-        for (let i = 0; i < zero_counter; i++) {
-            result.push(0);
-        }
-
-        return result;
+        return arr;
     }
 
     alert(changer([false, true, 1, 2, 0, 3, 0, 4, 0, "hello"]))
